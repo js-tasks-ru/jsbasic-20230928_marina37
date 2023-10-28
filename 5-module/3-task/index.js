@@ -1,17 +1,18 @@
 function initCarousel() {
-  const carousel = document.querySelector('.carousel');
-  const carouselRow = document.querySelector('.carousel__inner');
-  const arrowLeft = document.querySelector('.carousel__arrow_left');
-  const arrowRight = document.querySelector('.carousel__arrow_right');
-  const img = document.querySelector('.carousel__img');
-  const slideWidth = img.offsetWidth;
-  const slides = document.querySelectorAll('.carousel__slide');
-  const counter = 1;
+  let carousel = document.querySelector('.carousel');
+  let carouselRow = document.querySelector('.carousel__inner');
+  let arrowLeft = document.querySelector('.carousel__arrow_left');
+  let arrowRight = document.querySelector('.carousel__arrow_right');
+  let img = document.querySelector('.carousel__img');
+  let slideWidth = img.offsetWidth;
+  let slides = document.querySelectorAll('.carousel__slide');
+  let counter = 1;
 
   arrowLeft.style.display = 'none';
 
   carousel.addEventListener('click', function(evt) {  
     let target = evt.target;
+    
 
     if (counter <= slides.length) {
       if (target !==  arrowLeft && target !==  arrowRight && target.parentElement !== arrowLeft && target.parentElement !== arrowRight) {
