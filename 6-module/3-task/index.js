@@ -86,3 +86,4 @@ export default class Carousel {
     return this.carousel;
   }
 }
+
